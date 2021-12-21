@@ -1,0 +1,55 @@
+@startuml
+
+
+interface Courseable{
++ calculatePrice(): double
+}
+
+class Frontend{
+- name : String
+- description : String
++ calculatePrice(): double
+}
+
+class Course{
+- name : String
+- description : String
++ calculatePrice(): double
+}
+
+class Workshop{
+- name : String
+- description : String
++ calculatePrice(): double
+}
+
+class Program{
+- name : String
+- description : String
++ calculatePrice(): double
+}
+
+class Career{
+- name : String
+- description : String
++ calculatePrice(): double
+}
+
+class Institute{
+
+}
+
+Courseable <|.. Frontend
+Courseable <|.. Career
+Courseable <|.. Workshop
+Courseable <|.. Backend
+Courseable <|.. Program
+Courseable "*" --* Program
+Courseable "*" <-- Institute
+Program --> Course
+
+
+
+
+
+@enduml
